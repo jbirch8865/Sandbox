@@ -8,7 +8,7 @@
  * https://medium.com/riow/deploy-to-production-server-with-git-using-php-ab69b13f78ad
  */
 // Run the commands for output
-$tmp = shell_exec('./refreshgit.sh 2>&1');
+$tmp = shell_exec('sudo -u pi ./refreshgit.sh 2>&1');
 // Output
 $output = "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">$tmp\n</span>";
 // Make it pretty for manual user access (and why not?)
