@@ -10,7 +10,7 @@
 // Run the commands for output
 $tmp = shell_exec('./refreshgit.sh');
 // Output
-$output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">$tmp\n</span>";
+$output = "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">$tmp\n</span>";
 // Make it pretty for manual user access (and why not?)
 ?>
 <!DOCTYPE HTML>
