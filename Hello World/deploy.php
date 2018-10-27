@@ -7,26 +7,10 @@
  * How To Use:
  * https://medium.com/riow/deploy-to-production-server-with-git-using-php-ab69b13f78ad
  */
-// The commands
-$commands = array(
-    'echo $PWD',
-    'whoami',
-    'git reset --hard HEAD',
-    'git pull',
-    'git status',
-    'git submodule sync',
-    'git submodule update',
-    'git submodule status',
-);
 // Run the commands for output
-$output = '';
-foreach($commands AS $command){
-    // Run it
-    $tmp = shell_exec($command.' 2>&1');
-    // Output
-    $output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
-    $output .= htmlentities(trim($tmp)) . "\n";
-}
+$tmp = shell_exec('./refreshgit.sh');
+// Output
+$output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">$tmp\n</span>";
 // Make it pretty for manual user access (and why not?)
 ?>
 <!DOCTYPE HTML>
